@@ -1,0 +1,78 @@
+{
+  // Place your snippets for javascriptreact here. Each snippet is defined under a snippet name and has a prefix, body and
+  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+  // same ids are connected.
+  // Example:
+  // \"Print to console": {
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+
+  "Console log": {
+    "prefix": "cons",
+    "body": ["console.log($0);"]
+  },
+
+  "Constructor": {
+    "prefix": "ctor",
+    "body": ["constructor(props) {", "    super(props);", "	$0", "}"]
+  },
+
+
+  "componentDidUpdate": {
+    "prefix": "componentDidUpdate",
+    "body": [
+      "componentDidUpdate(prevProps: ${1:Props}, prevState: ${2:State}){",
+      "	$0",
+      "}"
+    ]
+  },
+
+  "shouldComponentUpdate": {
+	"prefix": "shouldComponentUpdate",
+	"body": [
+	  "shouldComponentUpdate(nextProps: ${1:Props}, nextState: ${2:State}){",
+	  "	${3:return $0shouldUpdate(this, nextProps, nextState);}",
+	  "}"
+	]
+ },
+
+ "propcompare": {
+	"prefix": "propcompare",
+	"body": [
+	  "if(nextProps.$1 !== this.props.$1){",
+	  "	$0",
+	  "}"
+	]
+ },
+
+ "statecompare": {
+	"prefix": "statecompare",
+	"body": [
+	  "if(nextState.$1 !== this.state.$1){",
+	  "	$0",
+	  "}"
+	]
+ },
+
+  "reduce": {
+    "prefix": "reduce",
+    "body": ["reduce((prev, next) => $0, ${1:1})"]
+  },
+
+  
+  "forr":{
+	"prefix": "forr",
+	"body": [
+		"	for (let ${1:index} = ${2:array}.length - 1; ${1:index} >= 0; ${1:index}--) {",
+			"		let ${3:element} = ${2:array}[${1:index}];",
+			"		$0",
+			"	}"
+	]
+},
+}
